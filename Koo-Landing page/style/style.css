@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito+Sans:wght@200;400;600&family=Oswald:wght@400;600&family=Poppins:wght@400;600&display=swap");
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Nunito Sans, sans-serif;
+}
+
+:root {
+  --primary-color: yellow;
+  --secondary-color: #1f1f1f;
+  --third: white;
+
+}
+
+nav {
+  height: 10vh;
+  justify-content: space-between;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding: 0px calc((100vw - 1300px) / 2);
+}
+
+.logo {
+  color: var(--secondary-color);
+  font-size: 1.5 rem;
+  font-weight: bold;
+  padding: 0 2rem;
+  font-style: italic;
+}
+
+.logo img {
+  width: 50px;
+  display: inline;
+}
+
+.logo h1 {
+  display: inline;
+  font-size: 40px;
+  color: rgb(95, 91, 91);
+  /* font-weight: 600; */
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding: 0 1.5rem;
+  font-weight: 600;
+}
+
+.nav-items a:hover {
+  color: #fff;
+  transition: ease-in-out 0.2s;
+}
+
+.hero {
+  background: var(--primary-color);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+  padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--secondary-color);
+  padding: 0rem 2rem;
+}
+
+.column-left h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.column-left p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.column-left button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  color: var(--primary-color);
+  background: #000000;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.column-left button:hover {
+  background: #ec0303;
+  transition: ease-in-out 0.2s;
+  color: var(--third);
+  border: 1px solid var(--secondary-color);
+}
+
+column-right {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 0rem 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-items a:hover{
+  background-color: rgb(160, 175, 175);
+  color:#000000;
+  transition:0.5s;
+
+}
+
+@media screen and (max-width: 768px) {
+  .logo h1 {
+    font-size: 30px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-items a {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+
+  .column-left p {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+}
