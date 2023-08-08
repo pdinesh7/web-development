@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html {
+        background-color: rgb(90, 31, 8);
+    }
+
+    .second {
+
+        background-color: rgba(1, 12, 11, 0.507);
+        width: 400px;
+        height: 500px;
+        margin-left: 35%;
+        display: block;
+        display: flexbox;
+    }
+
+    h1 {
+        color: aliceblue;
+        text-align: center;
+    }
+
+    form input {
+        align-items: center;
+        margin-top: 25px;
+        border: none;
+        margin-left: 10%;
+        padding: 5px;
+        transform: translateZ(10px);
+        transition: 0.5s;
+        border-bottom: 2px solid #0d94b6d8;
+
+
+    }
+
+    input {
+        background: none;
+        outline: none;
+        border: none;
+        color: rgb(234, 243, 204);
+        font-size: 16px;
+        transform: translateX(6px);
+
+
+    }
+
+    input:hover {
+
+        transition: 0.5sec;
+        bottom: 2px;
+        cursor: pointer;
+        transform: translateY(-5px);
+
+
+
+    }
+
+    label {
+        margin-left: 10px;
+    }
+
+    textarea {
+        margin-top: 15px;
+        background: none;
+        border: none;
+        border-bottom: 3px solid #afccd3d8;
+        margin-left: 20px;
+        color: white;
+    }
+
+    button {
+        margin-top: 50px;
+        margin-left: 50px;
+        font-size: 19px;
+        background-color: rgba(65, 228, 65, 0.781);
+        border-color: white;
+        border-radius: 5px;
+        color: #fff;
+        padding: 5px;
+    }
+
+    button:hover{
+        background-color: rgba(255, 0, 0, 0.904);
+        transition: 0.5s;
+    }
+
+    form label {
+        color: white;
+    }
+</style>
+
+<body>
+    <h1>Message here</h1>
+    <div class="second">
+
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" name="Name" placeholder="Input Your Name"><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Example@Domain.com"><br>
+            <label for="Mobile number">Mobile number</label>
+            <input type="phone" name="Mob" placeholder="Mobile Number"><br>
+            <label for="message">Message</label>
+            <textarea name="message" id="" cols="" rows=""></textarea><br>
+
+
+            <button onclick="sent(),clos()">submit</button>
+        </form>
+
+
+    </div>
+
+    <script>
+
+        function sent() {
+            alert("Message sent Sucessfully!!!");
+        }
+ function clos(){
+    window.close();
+ }
+    </script>
+</body>
+
+</html>

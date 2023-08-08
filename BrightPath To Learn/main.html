@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap.css -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 10px;
+            background-color: azure;
+            background-image: url(./img/file.jfif);
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: brown;
+        }
+
+        p {
+            margin-top: 20px;
+            color: rgb(2, 3, 1);
+            font-family: 'Courier New', monospace;
+            font-weight: 300;
+            text-align: center;
+        }
+
+
+        button {
+            background-color: green;
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            margin: 4px 2px;
+            font-size: 16px;
+            border-radius: 12px;
+            align-items: center;
+            margin-left: 40%;
+            margin-top: 10px;
+            ;
+        }
+
+        button:hover {
+            background-color: rgb(204, 13, 13);
+            transition: 0.3sec;
+        }
+
+        marquee {
+            color: Blue;
+            font-size: 35px;
+            font-weight: 700;
+
+        }
+
+        button:active {
+
+            box-shadow: inset 3px;
+            background-color: rgba(10, 62, 173, 0.733);
+
+            transform: translateY(-10px) translateX(-20px);
+
+        }
+    </style>
+
+    <h1 class="text-center">Welcome to the Portal</h1>
+    <marquee behavior="" direction="left">Bright Path To Learn</marquee>
+    <h2></h2>
+    <p class="p1">There is no end to education. It is not that you read a book, pass an examination, and finish with
+        education. The whole of life, from the moment you are born to the moment you die, is a process of learning.</p>
+
+    <div class="links">
+        <div class="buttons1">
+
+            <ul>
+
+                <!-- button functions that redirects -->
+                <button onclick="study()">Study Materials</button><br>
+                <button onclick="quiz()"> Quiz</button><br>
+
+                <button onclick="feedback()">Feedback</button><br>
+                <button onclick="portfolio()">Website</button><br>
+                <button onclick="todo()">ToDO List</button><br>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script>
+        function study() {
+            window.open("./index.html");
+
+
+        }
+
+        function portfolio() {
+            window.open("./portfolio.html");
+
+        }
+
+        function todo() {
+            window.open("./todo.htm");
+        }
+
+        function feedback() {
+            window.open("./feedback.html");
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

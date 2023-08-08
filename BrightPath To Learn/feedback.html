@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(48, 76, 77, 0.562);
+            color: #fff;
+        }
+
+        h1 {
+            color: white;
+            margin-top: 55px;
+            margin-left: 40%;
+            text-shadow: 5cm;
+        }
+
+        h2 {
+            text-align: justify;
+        }
+
+        .first {
+            margin-top: 80px;
+            margin-left: 30%;
+
+        }
+
+        select {
+            color: #fff;
+            background-color: blueviolet;
+            font-size: 20px;
+
+        }
+
+        button {
+            margin-top: 10%;
+            font-size: 20px;
+            padding: 8px;
+            border-color: #fff;
+            border-radius: 6px;
+            background-color: rgba(51, 185, 24, 0.993);
+            color: #fff;
+
+
+        }
+
+        button:hover{
+            color: #000;
+            background-color: red;
+            transition: 0.3s;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Feedback here....</h1>
+    </div>
+    <div class="first">
+        <h2>How much would you like to rate our website</h2>
+        <select name="select" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h2>Does the content in the website you liked </h2>
+        <select name="" id="">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br>
+        <button onclick="feed1(),feed()">Submit</button>
+
+
+
+    </div>
+
+
+
+
+
+    <script>
+
+        function feed1(){
+
+            alert("thank you for feedback");
+        }
+
+        function feed() {
+
+            window.open("./feedback2.html");
+        }
+
+        
+
+
+
+
+    </script>
+
+</body>
+
+</html>

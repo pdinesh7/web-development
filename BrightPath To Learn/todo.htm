@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/—Pngtree—check mark icon_3566317.png" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito+Sans:wght@200;400;600&family=Oswald:wght@400;600&family=Poppins:wght@400;600&display=swap");
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: rgb(102, 247, 162);
+}
+
+
+.container {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100px;
+  min-width: 300px;
+  background: whitesmoke;
+  border-radius: 10px;
+}
+
+#newtask {
+  position: relative;
+
+  /* padding is used to alter the dimesions of the element */
+  padding: 30px 20px;
+  /* border: red 2px solid; */
+}
+
+#newtask input {
+  width: 75%;
+  height: 45px;
+  padding: 12px;
+  color: rgb(124, 4, 72);
+  caret-color: rgb(233, 13, 225);
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  position: relative;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 2px solid rgb(140, 17, 87);
+}
+
+#newtask input:focus {
+  outline: none;
+  border-color: #0d75ec;
+  transition: ease-in-out 0.3s;
+}
+
+#newtask button {
+  position: relative;
+  float: right;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #0b5bb6;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+#newtask button:hover {
+  opacity: 1;
+  transition: ease-in-out 0.3s;
+}
+
+#tasks {
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 6px 20px;
+}
+
+.task {
+  border-radius: 5px;
+  border: 1px solid #939697;
+  cursor: pointer;
+  background-color: #c5e1e6;
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+
+  display: flex;
+  /* x axis behaviour  */
+  justify-content: space-between;
+  /* y axis behaviour  */
+  align-items: center;
+}
+
+/* #taskname{ */
+.task span {
+  font-family: "Rock Salt", cursive;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.task button {
+  /* background-color: #0bccee; */
+  background-color: #0a2ea4;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 100%;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.task button :hover {
+  background-color: #ec0d62;
+  transition: ease-in-out 0.1s;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" placeholder="Enter your task">
+            <button id="push">Add</button>
+        </div>
+
+        <div id="tasks">
+            
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#push").onclick = function () {
+            if (document.querySelector("#newtask input").value.length == 0) {
+              alert("Task cannot be Empty!! Please Enter a Task");
+            } else {
+              document.querySelector("#tasks").innerHTML += `
+              <div class="task">
+                <span id="taskname">
+                ${document.querySelector("#newtask input").value}
+                </span>
+                  <button class="delete">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </button>
+              </div>`;
+          
+              document.querySelector("#newtask input").value = "";
+          
+              var current_tasks = document.querySelectorAll(".delete");
+              console.log(typeof current_tasks);
+              for (var i = 0; i < current_tasks.length; i++) {
+                current_tasks[i].onclick = function () {
+                  this.parentNode.remove();
+                };
+              }
+            }
+          };
+          
+    </script>
+
+</body>
+
+</html>
