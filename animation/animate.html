@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+
+<body>
+    <style>
+        div#p {
+            animation-name: animate;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            animation-duration: 5s;
+            animation-iteration-count: 5;
+
+            position: relative;
+
+        }
+
+        @keyframes animate {
+            0% {
+                background-color: antiquewhite;
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                background-color: red;
+                left: 300px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 300px;
+                top: 300px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+            }
+
+
+        }
+    </style>
+
+    <div id="p"></div>
+
+</body>
+
+</html>
