@@ -1,0 +1,123 @@
+body {
+    background-color: white;
+    ;
+}
+
+div input {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding-top: 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+
+
+
+}
+
+input:hover {
+
+    /* transition: 2s; */
+    transform: translateY(-4px);
+    border-bottom: 2px solid white;
+}
+
+div {
+    display: flexbox;
+    display: grid;
+    text-align: center;
+
+
+}
+
+input:focus {
+    color: white;
+}
+
+input:hover {
+    transform: scaleX(10px);
+
+}
+
+
+.container {
+
+    align-items: center;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    height: 400px;
+    margin-left: 35%;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    float: left;
+    position: absolute;
+    margin-left: 10px;
+}
+
+#check {
+
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    margin-top: 4px;
+}
+
+button {
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font: 500;
+    margin-top: 60px;
+
+}
+
+button:hover {
+    background-color: red;
+
+    transform: translateY(5px);
+
+}
+
+#login {
+
+    text-align: left;
+    margin-left: 10px;
+    color: aqua;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#login:active {
+    color: black;
+}
+
+#login:visited {
+    color: pink;
+}
+
+#login:link {
+    color: darkgreen;
+}
+
+#login:hover {
+    color: blue;
+    transform: translateY(-2px);
+}
