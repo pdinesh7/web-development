@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUBBLESORT</title>
+</head>
+
+<body>
+    <h1>bubblesort</h1>
+    <script language="javascript" type="text/javascript">
+
+
+        var arr = new Array(11, 2, 3, 5, 4, 6);
+
+
+        var i, j, temp;
+        document.write("elements before sort....<br>");
+        for (let i = 0; i < 6; i++)
+            document.write("</br>" + arr[i] + "</br>");
+
+        document.write("<br>Elements after sort....<br/><br>");
+        for (i = 0; i < 6; i++) {
+            for (j = 0; j < 5; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+            document.write("</br>" + arr[i] + "</br>");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
