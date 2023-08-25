@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetching details</title>
+    <style>
+        input {
+            margin: 10px;
+            text-align: justify;
+        }
+
+        input[type=button] {
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+
+        }
+    </style>
+    <script>
+        function register() {
+            //to input detais
+            var name = document.getElementById("name").value;
+            var mobile = document.getElementById("mnum").value;
+            var email = document.getElementById("mail").value;
+            var dob = document.getElementById("date").value;
+            var clr = document.getElementById("colr").value;
+            var fnum = document.getElementById("fnum").value;
+          
+
+            //to fetch deteails
+            document.getElementById("un").innerHTML = name;
+            document.getElementById("mn").innerHTML = mobile;
+            document.getElementById("em").innerHTML = email;
+            document.getElementById("db").innerHTML = dob;
+            document.getElementById("fc").innerHTML = clr;
+            document.getElementById("fn").innerHTML = fnum;
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    
+    <div>
+        <h1>User Details</h1>
+        <form action="">
+            <!-- input to form -->
+            User Name: <input type="text" name="uname" id="name" required placeholder="user name"><br>
+            Email: <input type="email" name="email" id="mail" required placeholder="email"><br />
+            Mobile NUmber: <input type="num" name="mobile" id="mnum" required placeholder="mobile num"><br />
+            DOB: <input type="date" name="dob" id="date" required> <br>
+            Fav Color: <input type="color" name="favcolr" id="colr" required><br />
+
+            <input type="button" value="register" onclick="register()">
+
+        </form>
+        <br><br>
+        <hr>
+
+
+        <form action="">
+            <fieldset id="showdetails">
+                <legend>user details</legend>
+                <table width="400" border="2">
+                    <tr>
+                        <td>Name:</td>
+                        <td id="un"> </td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td id="em"> </td>
+                    </tr>
+                    <tr>
+                        <td>Mobile:</td>
+                        <td id="mn"> </td>
+                    </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td id="db"> </td>
+                    </tr>
+                    <tr>
+                        <td>Fav Color</td>
+                        <td id="fc"> </td>
+                    </tr>
+                    <tr>
+                        <td>Fav Num</td>
+                        <td id="fn"> </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
