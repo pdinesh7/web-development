@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image animation usin dom</title>
+</head>
+
+<body>
+
+    <script>
+
+        function perform() {
+            var pnames = ["img1", "img2", "img3", "img4"];
+            var pimgs = ["./images/pic1.jpg", "./images/pic2.jpg", "./images/pic3.jpg", "./images/pic2.jpg"];
+
+            var itemName = document.getElementById("itemName");
+            var trange = document.getElementById("txtrange");
+            var pic = document.getElementById("pic");
+            var op = document.getElementById("demo");
+
+            op.innerHTML = trange.value;
+
+            itemName.innerHTML = pnames[trange.value];
+            pic.src = pimgs[trange.value];
+
+        }
+        trange.oninput = function () {
+            op.innerHTML = this.value;
+        }
+    </script>
+
+    
+
+
+    <div>
+
+        <table align="center" cellpadding="5" cellspacing="5" width="500" border="2">
+            <tr>
+                <td align="center" id="itemName"> </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="./images/pic1.jpg" alt="pic1" width="500" height="300" id="pic">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="range" name="" id="txtrange" min="0" max="3" value="0" onchange="perform()">
+                    <p id="demo"></p>
+                </td>
+            </tr>
+            
+        </table>
+    </div>
+
+</body>
+
+</html>
