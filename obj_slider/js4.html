@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj-slider</title>
+</head>
+
+<body>
+    <script>
+        function ch() {
+            var pn = document.getElementById("pname");
+            var pid = document.getElementById("pid");
+            var trange = document.getElementById("trange");
+            var pprice = document.getElementById("pprice");
+
+            var products = [
+
+                { id: 1, name: "ram", price: 12500, photo: "./images/pic1.jpg" },
+                { id: 2, name: "lucky", price: 22500, photo: "./images/pic2.jpg" },
+                { id: 3, name: "krish", price: 32500, photo: "./images/pic3.jpg" },
+                { id: 4, name: "lucky", price: 22500, photo: "./images/pic2.jpg" },
+
+            ]
+            var pic = document.getElementById("pic");
+
+            pic.src = products[trange.value].photo;
+            pid.innerHTML = products[trange.value].id;
+            pname.innerHTML = products[trange.value].name;
+            pprice.innerHTML = products[trange.value].price;
+        }
+
+
+
+
+    </script>
+    <div>
+        <table align="center" border="2" height="400" width="500">
+            <tr>
+                <td align="center"><img src="" alt="image" id="pic" height="300" width="300"></td>
+            </tr>
+
+            <tr>
+                <td>Product Name</td>
+                <td id="pname"> </td>
+            </tr>
+
+            <tr>
+                <td>Product Id</td>
+                <td id="pid"> </td>
+                </td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td id="pprice"> </td>
+                </td>
+            </tr>
+
+        
+            
+        </table>
+        <input type="range" id="trange" value="0" min="" max="3" onchange="ch()">
+    </div>
+</body>
+
+</html>
