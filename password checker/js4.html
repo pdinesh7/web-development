@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+    <style>
+        body {
+            color: blue;
+        }
+
+        legend {
+            color: red;
+        }
+
+        form {
+            display: block;
+            background-color: lightyellow;
+            font-size: 20px;
+        }
+
+        input[type=password] {
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        h1 {
+            margin: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Example of Regular Expressions</h1>
+    <form action="">
+        <fieldset>
+            <legend>Please input your password</legend>
+            <input type="password" name="pass" id="pass" placeholder="Password" onkeyup="vpass()" required>
+            <meter id="grade" min="1" max="100" value="0" high="0" low="0"></meter>
+            <span id="msg"></span>
+        </fieldset>
+    </form>
+    <script>
+        function vpass() {
+            var pass = document.getElementById("pass").value;
+            var grade = document.getElementById("grade");
+            var msg = document.getElementById("msg");
+
+            function showgrade(min, max, value, high, low) {
+                grade.min = min;
+                grade.max = max;
+                grade.value = value;
+                grade.high = high;
+                grade.low = low;
+            }
+
+            var regularExp = /(?=.*[A-Z])\w{4,15}/;
+            if (regularExp.test(pass)) {
+                msg.innerHTML = "Strong Password";
+                showgrade(1, 100, 100, 20, 0);
+            } else {
+                if (pass.length < 4) {
+                    msg.innerHTML= "Poor Password";
+                    showgrade(1, 100, 80, 60, 0);
+                } else {
+                    msg.innerHTML = "Weak Password";
+                    showgrade(1, 100, 40, 50, 0);
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
