@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example of increment and decrement</title>
+</head>
+
+<body>
+    <script>
+
+        var count = 0;
+
+        var prod = ["./pic1.jpg", "./pic2.jpg", "./pic3.jpg", "./pic4.jpg"];
+
+        function PreviousClick() {
+            var pic = document.getElementById("pic");
+
+            count--;
+            pic.src = prod[count];
+
+        }
+
+        function NextClick() {
+            var pic = document.getElementById("pic");
+            count++;
+            pic.src = prod[count];
+        }
+
+    </script>
+
+    <table align="center" cellspacing="2" cellpadding="5" border="2">
+        <tr>
+            <td><input type="button" value="Previous" onchange="PreviousClick()"></td>
+
+            <td><img src="./pic1.jpg" alt="pic1" id="pic" width="500px" height="300px"></td>
+
+            <td><input type="button" value="Next" onclick="NextClick()"></td>
+
+        </tr>
+    </table>
+
+</body>
+
+</html>

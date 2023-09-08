@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function submitclick() {
+            var java = document.getElementById("java");
+            var net = document.getElementById("dotnet");
+            var python = document.getElementById("python");
+            var msg = document.getElementById("msg");
+
+            var courses = "";
+
+            if (java.checked) {
+                courses += java.value + "<br>";
+            }
+
+            if (net.checked){
+                courses+=net.value+"<br>";
+            }
+
+            if(python.checked){
+                courses+=python.value+"<br>"
+            }
+
+            if(courses==""){
+                courses+="empty";
+            }
+
+            msg.innerHTML = "<br>selected courses <br>" + courses;
+        }
+    </script>
+    <fieldset>
+
+        <legend>select courses</legend>
+        <ul>
+            <li><input type="checkbox" name="optJava" value="Java" id="java">Java</li>
+            <li><input type="checkbox" name="optDotNet" value=".net" id="dotnet">.net</li>
+            <li><input type="checkbox" name="optPython" value="Python" id="python">Python</li>
+        </ul>
+        <input type="button" value="Submit" onclick="submitclick()">
+    </fieldset>
+    <div align="center" id="msg"></div>
+
+</body>
+
+</html>
